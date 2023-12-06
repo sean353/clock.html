@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock {
+            font-size: 20em;
+            text-align: center;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: aqua;
+        }
+
+        body {
+            background-color: rgb(65, 48, 48);
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Clock</h1>
+    <div id="clock"></div>
+
+    </div>
+    <script>
+        const starttime = () => {
+
+            const today = new Date();
+            const h = today.getHours();
+            const m = today.getMinutes();
+            const s = today.getSeconds();
+
+         
+
+            let timestring =
+                '<span style="color: gray;">' + h + '</span>:' +
+                '<span style="color: red;">' + (m<10 ? "0"+m:m) + '</span>:' +
+                '<span style="color: blue;">' + (s<10 ? "0"+s:s) + '</span>';
+            clock.innerHTML = timestring;
+
+        }
+        setInterval(starttime, 100)
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
